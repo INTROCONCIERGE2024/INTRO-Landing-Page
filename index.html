@@ -3,109 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selecciona tu idioma / Select your language</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .lang-button {
-            display: block;
-            margin: 20px;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            color: #fff;
-            background-color: #007BFF;
-            border-radius: 5px;
-        }
-        .lang-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Landing Page Multilingüe</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Selecciona tu idioma / Select your language</h1>
-        <a href="https://docs.google.com/forms/d/1_9SY1vFjoY_fBLpGpDmIdl5LXRedO4d2ikT2-jN71N4/prefill" class="lang-button" style="background-color: #FF5733;">Español</a>
-        <a href="https://docs.google.com/forms/d/1N4rj5AN99NGcytEZS0K08HJr9RTIw39mCSsqcU05g3w/edit" class="lang-button" style="background-color: #33A8FF;">English</a>
+        <div class="language-selector">
+            <label for="language">Selecciona tu idioma:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <!-- Agrega más idiomas si es necesario -->
+            </select>
+        </div>
+        <div id="content">
+            <!-- Contenido en diferentes idiomas -->
+            <div class="lang es">
+                <h1>Bienvenido a nuestra Landing Page</h1>
+                <p>Complete el formulario a continuación:</p>
+            </div>
+            <div class="lang en" style="display: none;">
+                <h1>Welcome to our Landing Page</h1>
+                <p>Please fill out the form below:</p>
+            </div>
+            <div class="lang fr" style="display: none;">
+                <h1>Bienvenue sur notre page de destination</h1>
+                <p>Veuillez remplir le formulaire ci-dessous :</p>
+            </div>
+            <!-- Agrega más bloques de contenido para otros idiomas -->
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selección de Experiencias de Lujo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 25px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007BFF;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            margin-top: 30px;
-            color: #777;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>¡Participa en Nuestro Cuestionario y Ayúdanos a Mejorar!</h1>
-        <p>Tu opinión es muy valiosa para nosotros. ¡Gracias por tomarte el tiempo!</p>
-        <p>En INTRO CONCIERGE, estamos comprometidos en ofrecerte el mejor servicio/producto. Para lograrlo, necesitamos tu opinión. Este cuestionario solo te tomará unos minutos y nos ayudará a entender mejor tus necesidades y expectativas.</p>
-        <h2>Beneficios</h2>
-        <ul>
-            <li><strong>Tu Voz Importa:</strong> Cada respuesta cuenta y nos ayuda a mejorar.</li>
-            <li><strong>Confidencialidad Garantizada:</strong> Tus respuestas serán completamente anónimas.</li>
-            <li><strong>Resultados:</strong> Compartiremos un resumen de los resultados y las acciones que tomaremos en base a tus comentarios.</li>
-        </ul>
-        <h2>Instrucciones</h2>
-        <ol>
-            <li>Haz clic en el botón de abajo para acceder al cuestionario.</li>
-            <li>Responde las preguntas de manera honesta.</li>
-            <li>Envía el formulario y listo.</li>
-        </ol>
-        <a href="https://docs.google.com/forms/d/1_9SY1vFjoY_fBLpGpDmIdl5LXRedO4d2ikT2-jN71N4/prefill" class="cta-button">Responder Cuestionario</a>
-    </div>
-    <footer>
-        <p>Contacta con nosotros en: info@empresa.com | Síguenos en redes sociales: <a href="#">Facebook</a>, <a href="#">Twitter</a>, <a href="#">Instagram</a></p>
-        <p><a href="#">Aviso de privacidad</a></p>
-    </footer>
-</body>
-</html>
+<div class="lang es">
+    <h1>Bienvenido a nuestra Landing Page</h1>
+    <p>Complete el formulario a continuación:</p>
+    <iframe src="https://docs.google.com/forms/d/1_9SY1vFjoY_fBLpGpDmIdl5LXRedO4d2ikT2-jN71N4/prefill" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+</div>
+<div class="lang en" style="display: none;">
+    <h1>Welcome to our Landing Page</h1>
+    <p>Please fill out the form below:</p>
+    <iframe src="https://docs.google.com/forms/d/1N4rj5AN99NGcytEZS0K08HJr9RTIw39mCSsqcU05g3w/prefill" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+</div>
+<div class="lang fr" style="display: none;">
+    <h1>Bienvenue sur notre page de destination</h1>
+    <p>Veuillez remplir le formulaire ci-dessous :</p>
+    <iframe src="https://docs.google.com/forms/d/1aFL_rs5-5jtknWbrf_mGTKXMMIVfRgGpl9nZsWVSEqI/prefill" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement...</iframe>
+</div>
